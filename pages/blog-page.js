@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { getAllPostData } from '../lib/posts';
+import { getAllPostsData } from '../lib/posts';
 import Post from '../components/Post';
 
 const Blog = ({ posts }) => {
@@ -14,7 +14,7 @@ const Blog = ({ posts }) => {
 export default Blog;
 
 export async function getStaticProps() {
-  const posts = await getAllPostData();
+  const posts = await getAllPostsData();
   return {
     props: { posts },
   };
